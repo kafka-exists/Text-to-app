@@ -68,10 +68,9 @@ export default function App() {
     }
   };
 
-  async function callOpenRouter(userPrompt) {
-    const systemPrompt = `Return ONLY a JSON object of files for a web project. No talk. {"path": "content"}`;
-    
-    try {
+    async function callOpenRouter(userPrompt) {
+    const systemPrompt = "Return ONLY a JSON object of files for a web project. No talk. {\"path\": \"content\"}";
+
       const response = await fetch(OPENROUTER_URL, {
         method: 'POST',
         headers: {
